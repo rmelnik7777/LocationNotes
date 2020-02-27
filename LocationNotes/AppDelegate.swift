@@ -15,18 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        print(CoreDataManager.sharedInstance.persistentContainer.persistentStoreDescriptions)
-//
-//
-//        let nf = Folder.newFolder(name: "КRo")
-//        nf.addNote().name = "Жованый крот"
-//        nf.addNote().name = "🙊🙊🙊🙊🙊🙊"
-//        nf.addNote().name = "🐼🐼🐼🐼🐼🐼"
-//        CoreDataManager.sharedInstance.saveContext()
-//        print(folders.count)
-//        print(folders[0].name)
-//        print(notes.count)
-//        print(notes[0].name)
         return true
     }
 

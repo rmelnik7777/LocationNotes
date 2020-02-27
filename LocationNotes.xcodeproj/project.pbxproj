@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555E15C32407FB260010BDF3 /* SelectFolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E15C22407FB260010BDF3 /* SelectFolderVC.swift */; };
 		5560E58D24014E3F00061EC0 /* FoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560E58C24014E3F00061EC0 /* FoldersVC.swift */; };
 		5570C86823FA832C002B89CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C86723FA832C002B89CC /* AppDelegate.swift */; };
 		5570C86A23FA832C002B89CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C86923FA832C002B89CC /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555E15C22407FB260010BDF3 /* SelectFolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFolderVC.swift; sourceTree = "<group>"; };
 		5560E58C24014E3F00061EC0 /* FoldersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersVC.swift; sourceTree = "<group>"; };
 		5570C86423FA832C002B89CC /* LocationNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5570C86723FA832C002B89CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				5560E58C24014E3F00061EC0 /* FoldersVC.swift */,
 				55CD911D2402C10600A778F3 /* FolderVC.swift */,
 				55CD911F2402F47E00A778F3 /* NoteVC.swift */,
+				555E15C22407FB260010BDF3 /* SelectFolderVC.swift */,
 				5570C86D23FA832C002B89CC /* Main.storyboard */,
 				5570C87323FA832F002B89CC /* Assets.xcassets */,
 				5570C87523FA832F002B89CC /* LaunchScreen.storyboard */,
@@ -186,6 +189,7 @@
 				5570C88623FA99D7002B89CC /* Location+CoreDataClass.swift in Sources */,
 				5570C87223FA832C002B89CC /* LocationNotes.xcdatamodeld in Sources */,
 				5570C86823FA832C002B89CC /* AppDelegate.swift in Sources */,
+				555E15C32407FB260010BDF3 /* SelectFolderVC.swift in Sources */,
 				5570C88823FA99D7002B89CC /* ImageNote+CoreDataClass.swift in Sources */,
 				5570C88B23FA99D7002B89CC /* Folder+CoreDataProperties.swift in Sources */,
 				55CD911E2402C10600A778F3 /* FolderVC.swift in Sources */,
@@ -341,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G879CH66J5;
 				INFOPLIST_FILE = LocationNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ro.LocationNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G879CH66J5;
 				INFOPLIST_FILE = LocationNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,7 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ro.LocationNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

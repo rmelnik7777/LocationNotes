@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551BFB6E2408499D0033CBF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BFB6D2408499D0033CBF9 /* LocationManager.swift */; };
 		555E15C32407FB260010BDF3 /* SelectFolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E15C22407FB260010BDF3 /* SelectFolderVC.swift */; };
 		5560E58D24014E3F00061EC0 /* FoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560E58C24014E3F00061EC0 /* FoldersVC.swift */; };
 		5570C86823FA832C002B89CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C86723FA832C002B89CC /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		551BFB6D2408499D0033CBF9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		555E15C22407FB260010BDF3 /* SelectFolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFolderVC.swift; sourceTree = "<group>"; };
 		5560E58C24014E3F00061EC0 /* FoldersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersVC.swift; sourceTree = "<group>"; };
 		5570C86423FA832C002B89CC /* LocationNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +84,9 @@
 		5570C86623FA832C002B89CC /* LocationNotes */ = {
 			isa = PBXGroup;
 			children = (
-				5570C88E23FA99EC002B89CC /* Model */,
+				5570C88E23FA99EC002B89CC /* CoreData */,
 				5570C86723FA832C002B89CC /* AppDelegate.swift */,
+				551BFB6D2408499D0033CBF9 /* LocationManager.swift */,
 				5570C86923FA832C002B89CC /* SceneDelegate.swift */,
 				5560E58C24014E3F00061EC0 /* FoldersVC.swift */,
 				55CD911D2402C10600A778F3 /* FolderVC.swift */,
@@ -97,7 +100,7 @@
 			path = LocationNotes;
 			sourceTree = "<group>";
 		};
-		5570C88E23FA99EC002B89CC /* Model */ = {
+		5570C88E23FA99EC002B89CC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				55EE5A3C23FE7C19001F8642 /* CoreDataManager.swift */,
@@ -111,7 +114,7 @@
 				5570C88023FA99D7002B89CC /* ImageNote+CoreDataClass.swift */,
 				5570C88123FA99D7002B89CC /* ImageNote+CoreDataProperties.swift */,
 			);
-			path = Model;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5570C88D23FA99D7002B89CC /* Note+CoreDataProperties.swift in Sources */,
+				551BFB6E2408499D0033CBF9 /* LocationManager.swift in Sources */,
 				5570C88623FA99D7002B89CC /* Location+CoreDataClass.swift in Sources */,
 				5570C87223FA832C002B89CC /* LocationNotes.xcdatamodeld in Sources */,
 				5570C86823FA832C002B89CC /* AppDelegate.swift in Sources */,

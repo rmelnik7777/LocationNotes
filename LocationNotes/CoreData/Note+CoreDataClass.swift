@@ -33,7 +33,7 @@ public class Note: NSManagedObject {
                 }
                 self.imageSmall = nil
             } else {
-                if self.image != nil {
+                if self.image == nil {
                     self.image = ImageNote(context: CoreDataManager.sharedInstance.managedObjecContext)
                 }
                 self.image?.imageBig = newValue!.jpegData(compressionQuality: 1)
@@ -49,6 +49,41 @@ public class Note: NSManagedObject {
                 }
             }
             return nil
+        }
+    }
+    
+    var locationActual: LocationCoordinate? {
+        get {
+            if self.location == nil{
+                return nil
+            } else {
+                return LocationCoordinate(lat: self.location!.lat, lon: self.location!.lon)
+            }
+        }
+        set {
+            if newValue == nil && self.location != nil {
+                //удалить локацию
+                CoreDataManager.sharedInstance.managedObjecContext.delete(self.location!)
+            }
+            if newValue != nil && self.location != nil {
+                //обновить локацию
+                self.location?.lat = newValue!.lat
+                self.location?.lon = newValue!.lon
+            }
+            if newValue != nil && self.location == nil {
+                //создать локацию
+                let newLocation = Location(context: CoreDataManager.sharedInstance.managedObjecContext)
+                newLocation.lat = newValue!.lat
+                newLocation.lon = newValue!.lon
+                self.location = newLocation
+            }
+        }
+    }
+    
+    func addCurrentLocation() {
+        LocationManager.shareInstance.getCurrentLocation { (location) in
+            self.locationActual = location
+            print("🐹🐹🐹🐹🐹Новая локация \(location)")
         }
     }
     

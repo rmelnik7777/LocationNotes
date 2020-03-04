@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		551BFB6E2408499D0033CBF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BFB6D2408499D0033CBF9 /* LocationManager.swift */; };
+		555D0DEC241031F50045E55E /* NoteMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D0DEB241031F50045E55E /* NoteMapVC.swift */; };
 		555E15C32407FB260010BDF3 /* SelectFolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E15C22407FB260010BDF3 /* SelectFolderVC.swift */; };
 		5560E58D24014E3F00061EC0 /* FoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560E58C24014E3F00061EC0 /* FoldersVC.swift */; };
 		5570C86823FA832C002B89CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C86723FA832C002B89CC /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		551BFB6D2408499D0033CBF9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		555D0DEB241031F50045E55E /* NoteMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMapVC.swift; sourceTree = "<group>"; };
 		555E15C22407FB260010BDF3 /* SelectFolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFolderVC.swift; sourceTree = "<group>"; };
 		5560E58C24014E3F00061EC0 /* FoldersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersVC.swift; sourceTree = "<group>"; };
 		5570C86423FA832C002B89CC /* LocationNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				55CD911D2402C10600A778F3 /* FolderVC.swift */,
 				55CD911F2402F47E00A778F3 /* NoteVC.swift */,
 				555E15C22407FB260010BDF3 /* SelectFolderVC.swift */,
+				555D0DEB241031F50045E55E /* NoteMapVC.swift */,
 				5570C86D23FA832C002B89CC /* Main.storyboard */,
 				5570C87323FA832F002B89CC /* Assets.xcassets */,
 				5570C87523FA832F002B89CC /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				5570C88A23FA99D7002B89CC /* Folder+CoreDataClass.swift in Sources */,
 				5570C88C23FA99D7002B89CC /* Note+CoreDataClass.swift in Sources */,
 				5570C88723FA99D7002B89CC /* Location+CoreDataProperties.swift in Sources */,
+				555D0DEC241031F50045E55E /* NoteMapVC.swift in Sources */,
 				5570C88923FA99D7002B89CC /* ImageNote+CoreDataProperties.swift in Sources */,
 				5560E58D24014E3F00061EC0 /* FoldersVC.swift in Sources */,
 			);

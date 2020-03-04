@@ -101,6 +101,9 @@ class NoteVC: UITableViewController {
         if segue.identifier == "goToSelectFolder" {
             (segue.destination as! SelectFolderVC).note = note
         }
+        if segue.identifier == "goToMap" {
+            (segue.destination as! NoteMapVC).note = note
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }

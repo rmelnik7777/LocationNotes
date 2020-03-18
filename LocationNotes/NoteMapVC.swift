@@ -10,13 +10,15 @@ import MapKit
 import UIKit
 
 class NoteAnnotation: NSObject, MKAnnotation {
-    
+    var note: Note?
     var coordinate: CLLocationCoordinate2D
 
     var title: String?
     var subtitle: String?
     
     init(note: Note) {
+        self.note = note
+        title = note.name
         if note.locationActual != nil {
             coordinate = CLLocationCoordinate2D(latitude: note.locationActual!.lat, longitude: note.locationActual!.lon)
         } else {

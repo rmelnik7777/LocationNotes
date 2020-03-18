@@ -50,38 +50,6 @@
             endingLineNumber = "43"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B4543D70-46A7-43C6-A185-A72FD045ABC6 - 7eb1dbeb3924796b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LocationNotes.FoldersVC.viewDidLoad() -&gt; ()"
-                  moduleName = "LocationNotes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/MacC/Project/work/LocationNotes/LocationNotes/FoldersVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "B4543D70-46A7-43C6-A185-A72FD045ABC6 - fd78d9c17ace9275"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (LocationNotes.LocationCoordinate) -&gt; () in LocationNotes.FoldersVC.viewDidLoad() -&gt; ()"
-                  moduleName = "LocationNotes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/MacC/Project/work/LocationNotes/LocationNotes/FoldersVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

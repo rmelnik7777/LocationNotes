@@ -1,0 +1,63 @@
+
+/* Class = "UINavigationItem"; title = "Map"; ObjectID = "0US-rw-Cut"; */
+"0US-rw-Cut.title" = "Map";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2hD-IH-u3U"; */
+"2hD-IH-u3U.text" = "Title";
+
+/* Class = "UILabel"; text = "name Folder"; ObjectID = "3HZ-QD-gmq"; */
+"3HZ-QD-gmq.text" = "name Folder";
+
+/* Class = "UITabBarItem"; title = "Folders"; ObjectID = "4L0-Fo-jc5"; */
+"4L0-Fo-jc5.title" = "Folders";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "8VF-eI-DTU"; */
+"8VF-eI-DTU.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "BPK-JL-bNx"; */
+"BPK-JL-bNx.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Map"; ObjectID = "EaU-oc-DzG"; */
+"EaU-oc-DzG.title" = "Map";
+
+/* Class = "UINavigationItem"; title = "Name note"; ObjectID = "G5N-16-B8v"; */
+"G5N-16-B8v.title" = "Name note";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Gbn-YC-7cM"; */
+"Gbn-YC-7cM.text" = "Detail";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "GsX-of-NRP"; */
+"GsX-of-NRP.title" = "Map";
+
+/* Class = "UINavigationItem"; title = "Folders"; ObjectID = "Kf4-QJ-95U"; */
+"Kf4-QJ-95U.title" = "Folders";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Lb0-nY-4hn"; */
+"Lb0-nY-4hn.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Name folder"; ObjectID = "Rbh-JI-oKU"; */
+"Rbh-JI-oKU.title" = "Name folder";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "T62-w9-1z9"; */
+"T62-w9-1z9.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITextField"; placeholder = "Name note"; ObjectID = "a8x-em-Gq4"; */
+"a8x-em-Gq4.placeholder" = "Name note";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "dVs-V4-zLo"; */
+"dVs-V4-zLo.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "iwN-On-glw"; */
+"iwN-On-glw.text" = "Location";
+
+/* Class = "UILabel"; text = "Folder"; ObjectID = "mG9-IH-0mS"; */
+"mG9-IH-0mS.text" = "Folder";
+
+/* Class = "UINavigationItem"; title = "Notes"; ObjectID = "rdw-O2-aaz"; */
+"rdw-O2-aaz.title" = "Notes";
+
+/* Class = "UITabBarItem"; title = "Notes"; ObjectID = "tQs-h9-Q8A"; */
+"tQs-h9-Q8A.title" = "Notes";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "yLy-mr-lj8"; */
+"yLy-mr-lj8.text" = "Title";

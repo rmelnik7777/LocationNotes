@@ -20,6 +20,8 @@ class FolderVC: UITableViewController {
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let folder = folder {
@@ -27,6 +29,8 @@ class FolderVC: UITableViewController {
         } else{
             navigationItem.title = "All notes"
         }
+        
+ 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,10 +72,14 @@ class FolderVC: UITableViewController {
         performSegue(withIdentifier: "goToNote", sender: self)
     }
     
-    
+    var buyingForm = BuyingForm()
     
     var selectedNote: Note?
     @IBAction func pushAddAction(_ sender: Any) {
+        if buyingForm.isNeedToShow {
+            buyingForm.showForm(inController: self)
+            return
+        }
         selectedNote = Note.newNote(name: "nn", inFolder: folder)
         selectedNote?.addCurrentLocation()
         performSegue(withIdentifier: "goToNote", sender: self)

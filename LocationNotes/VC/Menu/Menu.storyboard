@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MenuVC-->
+        <scene sceneID="fC7-qd-mkQ">
+            <objects>
+                <viewController storyboardIdentifier="MenuVC" id="rXb-tH-a3X" customClass="MenuVC" customModule="LocationNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ecw-fQ-cKZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYp-dJ-lHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zI1-RL-bQx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la3-aj-sNU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-HO-cZw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите пункт меню" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-H1-fus">
+                                        <rect key="frame" x="0.0" y="15" width="414" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SaS-H1-fus" firstAttribute="top" secondItem="eB0-HO-cZw" secondAttribute="top" constant="15" id="D7w-LN-IYj"/>
+                                    <constraint firstAttribute="bottom" secondItem="SaS-H1-fus" secondAttribute="bottom" constant="15" id="IHa-qr-j3n"/>
+                                    <constraint firstAttribute="trailing" secondItem="SaS-H1-fus" secondAttribute="trailing" id="NlF-d0-is8"/>
+                                    <constraint firstItem="SaS-H1-fus" firstAttribute="leading" secondItem="eB0-HO-cZw" secondAttribute="leading" id="cMA-jL-2Wj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-cw-RZZ">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2F0-cw-RZZ" firstAttribute="top" secondItem="eB0-HO-cZw" secondAttribute="bottom" constant="8" symbolic="YES" id="2yL-RA-5IO"/>
+                            <constraint firstItem="ZYp-dJ-lHN" firstAttribute="top" secondItem="2F0-cw-RZZ" secondAttribute="bottom" id="3aO-cv-Fyk"/>
+                            <constraint firstItem="la3-aj-sNU" firstAttribute="top" secondItem="Ecw-fQ-cKZ" secondAttribute="bottom" id="4M1-O6-vbK"/>
+                            <constraint firstItem="eB0-HO-cZw" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="7Jz-so-RhX"/>
+                            <constraint firstItem="2F0-cw-RZZ" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="Kof-x2-LpX"/>
+                            <constraint firstAttribute="trailing" secondItem="la3-aj-sNU" secondAttribute="trailing" id="Lnv-AO-itq"/>
+                            <constraint firstAttribute="trailing" secondItem="2F0-cw-RZZ" secondAttribute="trailing" id="Otf-46-hBo"/>
+                            <constraint firstAttribute="trailing" secondItem="eB0-HO-cZw" secondAttribute="trailing" id="Zq8-KY-2o6"/>
+                            <constraint firstItem="ZYp-dJ-lHN" firstAttribute="top" secondItem="la3-aj-sNU" secondAttribute="bottom" id="eOD-LM-Ifu"/>
+                            <constraint firstItem="la3-aj-sNU" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="pNx-f5-Oq8"/>
+                            <constraint firstItem="eB0-HO-cZw" firstAttribute="top" secondItem="Ecw-fQ-cKZ" secondAttribute="bottom" id="sJK-Pe-L8r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="chU-jB-FtM"/>
+                    <connections>
+                        <outlet property="headerLabel" destination="SaS-H1-fus" id="ej6-xd-Qrp"/>
+                        <outlet property="tableView" destination="2F0-cw-RZZ" id="bPf-Lf-ONe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlr-uQ-2bI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="101.78571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Psg-ww-yC3">
+            <objects>
+                <navigationController storyboardIdentifier="MenuNavVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Noe-0R-Nox" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7PA-g6-GfJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rXb-tH-a3X" kind="relationship" relationship="rootViewController" id="gW4-3i-oYM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70t-8B-JuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>

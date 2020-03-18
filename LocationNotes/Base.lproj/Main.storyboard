@@ -10,7 +10,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Gr4-yL-0Oj">
             <objects>
-                <tabBarController id="8dZ-9a-nkp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabNavBar" id="8dZ-9a-nkp" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wnd-T4-mYq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -85,7 +85,7 @@
         <!--Map-->
         <scene sceneID="ASh-sJ-5Ze">
             <objects>
-                <viewController id="H2v-MQ-LGF" sceneMemberID="viewController">
+                <viewController id="H2v-MQ-LGF" customClass="MapVC" customModule="LocationNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEm-6l-QtH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,9 @@
                         <viewLayoutGuide key="safeArea" id="ji8-sa-xgC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="0US-rw-Cut"/>
+                    <connections>
+                        <outlet property="mapView" destination="93I-cd-zdu" id="j4C-gf-1uS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cND-2f-xFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,6 +151,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Folders" id="Kf4-QJ-95U">
+                        <barButtonItem key="leftBarButtonItem" title="Subscribe" style="plain" id="eu1-Oj-jjL">
+                            <connections>
+                                <action selector="subscribeButtonTapped:" destination="8s6-wN-snW" id="eQM-a9-goM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cej-VW-63R">
                             <connections>
                                 <action selector="pushAddAction:" destination="8s6-wN-snW" id="HeB-NJ-Hrd"/>
@@ -223,7 +231,7 @@
         <!--Name note-->
         <scene sceneID="ojh-Dh-CFK">
             <objects>
-                <tableViewController id="s0n-HS-5oG" customClass="NoteVC" customModule="LocationNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="noteSID" id="s0n-HS-5oG" customClass="NoteVC" customModule="LocationNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="bf4-9F-8dG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -370,7 +378,11 @@
                                 <action selector="pushDoneAction:" destination="s0n-HS-5oG" id="YaF-1U-5F1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="nD9-jN-bsr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="nD9-jN-bsr">
+                            <connections>
+                                <action selector="shareNote:" destination="s0n-HS-5oG" id="wSa-eA-KoX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="folderLabel" destination="mG9-IH-0mS" id="1Ha-MT-p69"/>

@@ -129,5 +129,11 @@ class FoldersVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    
+    @IBAction func subscribeButtonTapped(_ sender: Any) {
+//        navigationController?.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+    }
+    
 }

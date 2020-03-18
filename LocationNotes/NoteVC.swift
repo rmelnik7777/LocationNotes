@@ -95,6 +95,21 @@ class NoteVC: UITableViewController {
        _ = navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func shareNote(_ sender: Any) {
+        
+        var activities: [Any] = []
+//        if note?.imageActual != nil {
+//            activities.append(note?.imageActual ?? "")
+//        }
+        activities.append(note?.name ?? "")
+        activities.append(note?.textDescription ?? "")
+        
+        let activityController = UIActivityViewController(activityItems: activities, applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
+    
+    
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

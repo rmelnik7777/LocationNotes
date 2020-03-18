@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BannerVC-->
+        <scene sceneID="zr2-zn-kCr">
+            <objects>
+                <viewController storyboardIdentifier="BannerVC" id="oIL-26-KFl" customClass="BannerVC" customModule="LocationNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpP-Yf-yZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="h7s-kM-fXi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXt-mo-W9o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tY2-2b-aZm">
+                                        <rect key="frame" x="20" y="220.5" width="374" height="182"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFA-hG-kvX">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyY-U6-pxF">
+                                                        <rect key="frame" x="20" y="20" width="334" height="32"/>
+                                                        <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can Subscribe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N67-HX-lG2">
+                                                        <rect key="frame" x="20" y="67" width="334" height="28"/>
+                                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="22"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="iyY-U6-pxF" firstAttribute="top" secondItem="WFA-hG-kvX" secondAttribute="top" constant="20" id="1od-lb-TWj"/>
+                                                    <constraint firstItem="N67-HX-lG2" firstAttribute="leading" secondItem="WFA-hG-kvX" secondAttribute="leading" constant="20" id="Lea-sm-zBg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="N67-HX-lG2" secondAttribute="bottom" constant="20" id="TuI-4o-b8c"/>
+                                                    <constraint firstItem="N67-HX-lG2" firstAttribute="top" secondItem="iyY-U6-pxF" secondAttribute="bottom" constant="15" id="bhT-AK-CsI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iyY-U6-pxF" secondAttribute="trailing" constant="20" id="fQ5-6V-ID8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="N67-HX-lG2" secondAttribute="trailing" constant="20" id="oUH-tU-Wcf"/>
+                                                    <constraint firstItem="iyY-U6-pxF" firstAttribute="leading" secondItem="WFA-hG-kvX" secondAttribute="leading" constant="20" id="pxs-JA-HMX"/>
+                                                </constraints>
+                                            </view>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="I5g-ZV-nIe">
+                                                <rect key="frame" x="154.5" y="125" width="65" height="37"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="7mA-59-T7q"/>
+                                                </constraints>
+                                                <color key="pageIndicatorTintColor" name="appBlue"/>
+                                                <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </pageControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.498046875" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="WFA-hG-kvX" firstAttribute="top" secondItem="tY2-2b-aZm" secondAttribute="top" id="D6f-jW-3sT"/>
+                                            <constraint firstItem="I5g-ZV-nIe" firstAttribute="top" secondItem="WFA-hG-kvX" secondAttribute="bottom" constant="10" id="Jyo-Wz-HsV"/>
+                                            <constraint firstItem="I5g-ZV-nIe" firstAttribute="centerX" secondItem="tY2-2b-aZm" secondAttribute="centerX" id="Kby-Wc-h4L"/>
+                                            <constraint firstAttribute="bottom" secondItem="I5g-ZV-nIe" secondAttribute="bottom" constant="20" id="L4O-ff-Vlt"/>
+                                            <constraint firstItem="WFA-hG-kvX" firstAttribute="leading" secondItem="tY2-2b-aZm" secondAttribute="leading" id="gH1-bH-aIw"/>
+                                            <constraint firstAttribute="trailing" secondItem="WFA-hG-kvX" secondAttribute="trailing" id="p0l-bb-I1n"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-YU-jhJ">
+                                        <rect key="frame" x="329" y="10" width="75" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MXc-T4-PcJ"/>
+                                            <constraint firstAttribute="width" constant="75" id="ZEn-Vz-Nmu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="22"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="oIL-26-KFl" eventType="touchUpInside" id="F7M-hg-KQ1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="B5P-YU-jhJ" secondAttribute="trailing" constant="10" id="4uI-Cq-WKi"/>
+                                    <constraint firstItem="tY2-2b-aZm" firstAttribute="centerY" secondItem="jXt-mo-W9o" secondAttribute="centerY" id="Tcr-1Z-Ef1"/>
+                                    <constraint firstItem="tY2-2b-aZm" firstAttribute="leading" secondItem="jXt-mo-W9o" secondAttribute="leading" constant="20" id="aXi-ZD-gLP"/>
+                                    <constraint firstAttribute="trailing" secondItem="tY2-2b-aZm" secondAttribute="trailing" constant="20" id="ehJ-bh-yig"/>
+                                    <constraint firstItem="B5P-YU-jhJ" firstAttribute="top" secondItem="jXt-mo-W9o" secondAttribute="top" constant="10" id="fTV-Ea-tTn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOT-D0-hqi">
+                                <rect key="frame" x="40" y="732" width="334" height="45"/>
+                                <color key="backgroundColor" name="appOrange"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="subscribeFullButtonTapped:" destination="oIL-26-KFl" eventType="touchUpInside" id="y08-13-9cb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-aW-gtn">
+                                <rect key="frame" x="40" y="797" width="334" height="45"/>
+                                <color key="backgroundColor" name="appOrange"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="22"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restoreButtonTapped:" destination="oIL-26-KFl" eventType="touchUpInside" id="fqz-oe-2hW"/>
+                                    <action selector="subscribeExtendedButtonTapped:" destination="oIL-26-KFl" eventType="touchUpInside" id="Rhh-V7-F5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLR-pc-FFM">
+                                <rect key="frame" x="40" y="667" width="334" height="45"/>
+                                <color key="backgroundColor" name="appOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="cbC-dy-Vds"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="22"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="appBlue"/>
+                        <constraints>
+                            <constraint firstItem="jXt-mo-W9o" firstAttribute="trailing" secondItem="7IE-Va-Wsb" secondAttribute="trailing" id="31s-r3-Yfb"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="trailing" secondItem="TOT-D0-hqi" secondAttribute="trailing" constant="40" id="48l-Ez-Mgc"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="trailing" secondItem="h7s-kM-fXi" secondAttribute="trailing" id="C9b-6Q-I2x"/>
+                            <constraint firstItem="uUn-aW-gtn" firstAttribute="height" secondItem="TOT-D0-hqi" secondAttribute="height" id="DfU-SU-p8n"/>
+                            <constraint firstItem="h7s-kM-fXi" firstAttribute="leading" secondItem="7IE-Va-Wsb" secondAttribute="leading" id="F1h-nN-8ys"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="top" secondItem="h7s-kM-fXi" secondAttribute="top" constant="44" id="H5X-w3-EFm"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="trailing" secondItem="uUn-aW-gtn" secondAttribute="trailing" constant="40" id="JQv-ms-yvq"/>
+                            <constraint firstItem="TOT-D0-hqi" firstAttribute="top" secondItem="zLR-pc-FFM" secondAttribute="bottom" constant="20" id="LKu-0b-cHh"/>
+                            <constraint firstItem="uUn-aW-gtn" firstAttribute="top" secondItem="TOT-D0-hqi" secondAttribute="bottom" constant="20" id="NBn-sg-zB6"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="bottom" secondItem="h7s-kM-fXi" secondAttribute="bottom" constant="-34" id="Qb7-Ya-T92"/>
+                            <constraint firstItem="uUn-aW-gtn" firstAttribute="leading" secondItem="7IE-Va-Wsb" secondAttribute="leading" constant="40" id="R2k-ST-lpT"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="trailing" secondItem="zLR-pc-FFM" secondAttribute="trailing" constant="40" id="S4Z-Yz-S0c"/>
+                            <constraint firstItem="TOT-D0-hqi" firstAttribute="height" secondItem="zLR-pc-FFM" secondAttribute="height" id="XKU-wa-D8U"/>
+                            <constraint firstItem="zLR-pc-FFM" firstAttribute="top" secondItem="jXt-mo-W9o" secondAttribute="bottom" id="aBb-8Y-dWS"/>
+                            <constraint firstItem="jXt-mo-W9o" firstAttribute="top" secondItem="7IE-Va-Wsb" secondAttribute="top" id="eCD-mk-Xwo"/>
+                            <constraint firstItem="7IE-Va-Wsb" firstAttribute="bottom" secondItem="uUn-aW-gtn" secondAttribute="bottom" constant="20" id="jaG-7c-w5Q"/>
+                            <constraint firstItem="zLR-pc-FFM" firstAttribute="leading" secondItem="7IE-Va-Wsb" secondAttribute="leading" constant="40" id="jpK-vg-hpe"/>
+                            <constraint firstItem="jXt-mo-W9o" firstAttribute="leading" secondItem="7IE-Va-Wsb" secondAttribute="leading" id="kKs-Zz-TZy"/>
+                            <constraint firstItem="TOT-D0-hqi" firstAttribute="leading" secondItem="7IE-Va-Wsb" secondAttribute="leading" constant="40" id="xk6-to-YPL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7IE-Va-Wsb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lc1-Js-E4d"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="N67-HX-lG2" id="ap6-yp-jdN"/>
+                        <outlet property="labelView" destination="tY2-2b-aZm" id="pfZ-I4-4CT"/>
+                        <outlet property="labelsView" destination="WFA-hG-kvX" id="Z9G-4z-UGW"/>
+                        <outlet property="pageControl" destination="I5g-ZV-nIe" id="BOE-DE-kfH"/>
+                        <outlet property="titleLabel" destination="iyY-U6-pxF" id="b01-Wv-Z28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IF6-Js-c9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="-111.16071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="368" height="654"/>
+        <namedColor name="appBlue">
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appOrange">
+            <color red="1" green="0.40200001001358032" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

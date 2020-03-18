@@ -85,12 +85,16 @@ extension StoreManager: SKPaymentTransactionObserver {
 }
 
 extension StoreManager: SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse){
-        if response.invalidProductIdentifiers.count != 0 {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        if response.invalidProductIdentifiers.isEmpty {
+            print("Пусто")
+        } else {
             print("Есть неактуальные продукты \(response.invalidProductIdentifiers)")
         }
         
-        if response.products.count > 0 {
+        if response.products.isEmpty {
+            print("нет продуктов")
+        } else {
             versionProduct = response.products[0]
             print("Получили продукт: \(versionProduct?.localizedTitle ?? "") / \(versionProduct?.localizedDescription ?? "")")
             self.buyFullVersion()

@@ -20,20 +20,10 @@ class Router: NSObject {
         self.window = UIWindow(frame: UIScreen.main.bounds)
     }
     
-
-
     func showInitialVC() {
         window?.rootViewController = menuNavVC()
         window?.makeKeyAndVisible()
     }
-    
-    
-//    func rootMainViewController() {
-//        //        let mainTabbarVC = R.storyboard.mainTabBar.mainTabBarViewController()
-//        window?.rootViewController = TabBarManager.shared.tabBarController
-//        window?.makeKeyAndVisible()
-//    }
-
     
     // MARK: - Getters
     
@@ -49,28 +39,8 @@ class Router: NSObject {
         return R.storyboard.banner.bannerVC()
     }
     
-//    func bannerVC() -> BannerVC {
-//        return R.storyboard.banner.bannerVC()!
-//    }
-    
-    
-//    func loginVC() -> LoginViewController? {
-//        return R.storyboard.login.loginViewController()
-//    }
-//
-//    func recoveryPassVC() -> RecoveryPasswordViewController? {
-//        return R.storyboard.login.recoveryPasswordViewController()
-//    }
-//
-//    func newsDetailVC() -> NewsDetailsViewController? {
-//        return R.storyboard.news.newsDetailsViewController()
-//    }
-//
-//    func ticketVC() -> TicketViewController? {
-//        return R.storyboard.ticket.ticketViewController()
-//    }
-//
-//    func menuVC() -> MenuViewController? {
-//        return R.storyboard.menu.menuViewController()
-//    }
+    func noteVC() -> NoteVC? {
+        return R.storyboard.note.noteVC()
+    }
+
 }

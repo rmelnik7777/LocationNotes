@@ -10,23 +10,28 @@ import UIKit
 
 class NoteVC: UITableViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textDiscription: UITextView!
     @IBOutlet weak var folderLabel: UILabel!
     @IBOutlet weak var folderNameLabel: UILabel!
+    
+    // MARK: - Properties
+    
+    let imagePicker = UIImagePickerController()
     var note: Note?
-
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        textName.text = note?.name
-        textDiscription.text = note?.textDescription
-        imageView.image = note?.imageActual
-
-        navigationItem.title = note?.name
+        setNote()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let folder = note?.folder {
             folderNameLabel.text = folder.name
         } else {
@@ -34,8 +39,17 @@ class NoteVC: UITableViewController {
         }
     }
     
+    // MARK: - Helper
+    
+    func setNote() {
+        textName.text = note?.name
+        textDiscription.text = note?.textDescription
+        imageView.image = note?.imageActual
+        navigationItem.title = note?.name
+    }
+    
     func saveNote() {
-        if textName.text == "" && textDiscription.text == "" && imageView.image == nil {
+        if textName.text!.isEmpty && textDiscription.text.isEmpty && imageView.image == nil {
                CoreDataManager.sharedInstance.managedObjecContext.delete(note!)
                CoreDataManager.sharedInstance.saveContext()
                return
@@ -52,7 +66,6 @@ class NoteVC: UITableViewController {
     }
 
     // MARK: - Table view data source
-    let imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -60,15 +73,14 @@ class NoteVC: UITableViewController {
         if indexPath.row == 0 && indexPath.section == 0 {
             let alertController = UIAlertController(title: "Select action", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             
-            let a1Camera = UIAlertAction(title: "Make a photo", style: UIAlertAction.Style.default, handler: { (alert) in
+            let a1Camera = UIAlertAction(title: "Make a photo", style: UIAlertAction.Style.default, handler: { _ in
                 self.imagePicker.sourceType = .camera
                 self.imagePicker.delegate = self
                 self.present(self.imagePicker, animated: true, completion: nil)
             })
             alertController.addAction(a1Camera)
             
-            
-            let a2Photo = UIAlertAction(title: "Select from library", style: UIAlertAction.Style.default, handler: { (alert) in
+            let a2Photo = UIAlertAction(title: "Select from library", style: UIAlertAction.Style.default, handler: { _ in
                 self.imagePicker.sourceType = .savedPhotosAlbum  //.photoLibrary
                 self.imagePicker.delegate = self
                 self.present(self.imagePicker, animated: true, completion: nil)
@@ -76,12 +88,12 @@ class NoteVC: UITableViewController {
             alertController.addAction(a2Photo)
             
             if self.imageView.image != nil {
-                let a3Delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: { (alert) in
+                let a3Delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: { _ in
                 self.imageView.image = nil
                 })
                 alertController.addAction(a3Delete)
             }
-            let a4Cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
+            let a4Cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { _ in
             })
             alertController.addAction(a4Cancel)
 
@@ -89,18 +101,16 @@ class NoteVC: UITableViewController {
         }
     }
     
+    // MARK: - Actions
     
     @IBAction func pushDoneAction(_ sender: Any) {
         saveNote()
-       _ = navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func shareNote(_ sender: Any) {
         
         var activities: [Any] = []
-//        if note?.imageActual != nil {
-//            activities.append(note?.imageActual ?? "")
-//        }
         activities.append(note?.name ?? "")
         activities.append(note?.textDescription ?? "")
         
@@ -108,25 +118,23 @@ class NoteVC: UITableViewController {
         present(activityController, animated: true, completion: nil)
     }
     
-    
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSelectFolder" {
-            (segue.destination as! SelectFolderVC).note = note
+            (segue.destination as? SelectFolderVC)?.note = note
         }
         if segue.identifier == "goToMap" {
-            (segue.destination as! NoteMapVC).note = note
+            (segue.destination as? NoteMapVC)?.note = note
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
 }
 
+// MARK: - UIImagePickerControllerDelegate
+
 extension NoteVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         imageView.image = info[.originalImage] as? UIImage
         picker.dismiss(animated: true, completion: nil)
     }
@@ -135,4 +143,3 @@ extension NoteVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
         picker.dismiss(animated: true, completion: nil)
     }
 }
-

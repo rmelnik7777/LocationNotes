@@ -90,25 +90,8 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
-    /// This struct is generated for `FolderVC`, and contains static references to 1 segues.
-    struct folderVC {
-      /// Segue identifier `goToNote`.
-      static let goToNote: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, FolderVC, NoteVC> = Rswift.StoryboardSegueIdentifier(identifier: "goToNote")
-
-      #if os(iOS) || os(tvOS)
-      /// Optionally returns a typed version of segue `goToNote`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func goToNote(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, FolderVC, NoteVC>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.folderVC.goToNote, segue: segue)
-      }
-      #endif
-
-      fileprivate init() {}
-    }
-
     /// This struct is generated for `FoldersVC`, and contains static references to 1 segues.
     struct foldersVC {
       /// Segue identifier `goToFolder`.
@@ -159,7 +142,7 @@ struct R: Rswift.Validatable {
   #endif
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `Banner`.
     static let banner = _R.storyboard.banner()
@@ -169,6 +152,8 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `Menu`.
     static let menu = _R.storyboard.menu()
+    /// Storyboard `Note`.
+    static let note = _R.storyboard.note()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "Banner", bundle: ...)`
@@ -195,6 +180,13 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Menu", bundle: ...)`
     static func menu(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.menu)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Note", bundle: ...)`
+    static func note(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.note)
     }
     #endif
 
@@ -556,6 +548,9 @@ struct _R: Rswift.Validatable {
       #if os(iOS) || os(tvOS)
       try menu.validate()
       #endif
+      #if os(iOS) || os(tvOS)
+      try note.validate()
+      #endif
     }
 
     #if os(iOS) || os(tvOS)
@@ -605,12 +600,7 @@ struct _R: Rswift.Validatable {
 
       let bundle = R.hostingBundle
       let name = "Main"
-      let noteSID = StoryboardViewControllerResource<NoteVC>(identifier: "noteSID")
       let tabNavBar = StoryboardViewControllerResource<UIKit.UITabBarController>(identifier: "TabNavBar")
-
-      func noteSID(_: Void = ()) -> NoteVC? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: noteSID)
-      }
 
       func tabNavBar(_: Void = ()) -> UIKit.UITabBarController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tabNavBar)
@@ -622,7 +612,6 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.main().tabNavBar() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tabNavBar' could not be loaded from storyboard 'Main' as 'UIKit.UITabBarController'.") }
-        if _R.storyboard.main().noteSID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'noteSID' could not be loaded from storyboard 'Main' as 'NoteVC'.") }
       }
 
       fileprivate init() {}
@@ -651,6 +640,27 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.menu().menuNavVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuNavVC' could not be loaded from storyboard 'Menu' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.menu().menuVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuVC' could not be loaded from storyboard 'Menu' as 'MenuVC'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct note: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "Note"
+      let noteVC = StoryboardViewControllerResource<NoteVC>(identifier: "NoteVC")
+
+      func noteVC(_: Void = ()) -> NoteVC? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: noteVC)
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "folder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'folder' is used in storyboard 'Note', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.note().noteVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'noteVC' could not be loaded from storyboard 'Note' as 'NoteVC'.") }
       }
 
       fileprivate init() {}

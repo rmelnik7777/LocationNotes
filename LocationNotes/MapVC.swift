@@ -9,7 +9,6 @@
 import MapKit
 import UIKit
 
-
 class MapVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -31,19 +30,20 @@ class MapVC: UIViewController {
                   return
               }
               let point = recongnizer.location(in: mapView)
-              let c = mapView.convert(point, toCoordinateFrom: mapView)
+              let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
             
-            let newNote = Note.newNote(name: "🙊", inFolder: nil)
-            newNote.locationActual = LocationCoordinate(lat: c.latitude, lon: c.longitude)
-     
+            let newNote = Note.newNote(name: "New Note", inFolder: nil)
+            newNote.locationActual = LocationCoordinate(lat: coordinate.latitude, lon: coordinate.longitude)
             
-            let noteController = storyboard?.instantiateViewController(withIdentifier: "noteSID") as! NoteVC
-            noteController.note = newNote
-            navigationController?.pushViewController(noteController, animated: true)
+            goToNote(note: newNote)
+            
+//            let noteController = storyboard?.instantiateViewController(withIdentifier: "NoteVC") as! NoteVC
+//            noteController.note = newNote
+//            navigationController?.pushViewController(noteController, animated: true)
           }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
         mapView.removeAnnotations(mapView.annotations)
         
         for note in notes {
@@ -54,15 +54,14 @@ class MapVC: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func goToNote(note: Note?) {
+        guard let vc = Router.shared.noteVC() else { return }
+        vc.note = note
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
 
 }
 
@@ -84,11 +83,16 @@ extension MapVC: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let selectedNote = (view.annotation as! NoteAnnotation).note
+        let selectedNote = (view.annotation as? NoteAnnotation)?.note
+        goToNote(note: selectedNote)
         
-        let noteController = storyboard?.instantiateViewController(withIdentifier: "noteSID") as! NoteVC
-        noteController.note = selectedNote
-        navigationController?.pushViewController(noteController, animated: true)
+//        guard let vc = Router.shared.noteVC() else { return }
+//        vc.note = selectedNote
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let noteController = storyboard?.instantiateViewController(withIdentifier: "NoteVC") as! NoteVC
+//        noteController.note = selectedNote
+//        navigationController?.pushViewController(noteController, animated: true)
 //        present(noteController, animated: true, completion:  nil)
     }
 }

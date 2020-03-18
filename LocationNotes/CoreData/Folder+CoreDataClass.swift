@@ -7,12 +7,11 @@
 //
 //
 
-import Foundation
 import CoreData
 
 @objc(Folder)
 public class Folder: NSManagedObject {
-    class func newFolder(name: String) -> Folder  {
+    class func newFolder(name: String) -> Folder {
         let folder = Folder(context: CoreDataManager.sharedInstance.managedObjecContext)
         
         folder.name = name
@@ -20,7 +19,6 @@ public class Folder: NSManagedObject {
         return folder
         
     }
-    
     
     func addNote() -> Note {
         let note = Note(context: CoreDataManager.sharedInstance.managedObjecContext)
@@ -33,7 +31,7 @@ public class Folder: NSManagedObject {
     
     var notesSorted: [Note] {
         let sortDescriptor = NSSortDescriptor(key: "dateUpdate", ascending: false)
-        return self.notes?.sortedArray(using: [sortDescriptor]) as! [Note]
+        return self.notes?.sortedArray(using: [sortDescriptor]) as? [Note] ?? []
     }
 
 }

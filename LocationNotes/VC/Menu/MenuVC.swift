@@ -17,7 +17,7 @@ class MenuVC: UIViewController {
     
     // MARK: - Properties
     
-    let menu = [R.string.localizable.menuLocationNotes(), R.string.localizable.menuCurrencyConverter(),R.string.localizable.menuInDeveloping()]
+    let menu = [R.string.localizable.menuLocationNotes(), R.string.localizable.menuCurrencyConverter(), R.string.localizable.menuInDeveloping()]
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -69,6 +69,5 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
             showAlertView(R.string.localizable.menuAlertTitle(), R.string.localizable.menuAlertDescription())
         }
     }
-    
     
 }

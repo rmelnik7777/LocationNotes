@@ -30,11 +30,15 @@ class PriceManager: NSObject {
 extension PriceManager: SKProductsRequestDelegate {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse){
-        if response.invalidProductIdentifiers.count != 0 {
+        if response.invalidProductIdentifiers.isEmpty{
+            
+        } else {
 //            print("Есть неактуальные продукты \(response.invalidProductIdentifiers)")
         }
         
-        if response.products.count > 0 {
+        if response.products.isEmpty {
+            
+        } else {
             versionProduct = response.products[0]
 //            print("Получили продукт: \(fullVersionProduct?.localizedTitle ?? "") / \(fullVersionProduct?.localizedDescription ?? "")")
         }

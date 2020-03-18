@@ -20,18 +20,23 @@
                         <viewControllerLayoutGuide type="top" id="Ecw-fQ-cKZ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZYp-dJ-lHN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zI1-RL-bQx">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="zI1-RL-bQx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundMenu" translatesAutoresizingMaskIntoConstraints="NO" id="la3-aj-sNU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-cw-RZZ">
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-HO-cZw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите пункт меню" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-H1-fus">
-                                        <rect key="frame" x="0.0" y="51.5" width="414" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="56.5" width="414" height="23.5"/>
                                         <fontDescription key="fontDescription" name="SuperWebcomicBros.-Bold" family="Super Webcomic Bros." pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -39,36 +44,29 @@
                                 </subviews>
                                 <color key="backgroundColor" name="appOrange"/>
                                 <constraints>
-                                    <constraint firstItem="SaS-H1-fus" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eB0-HO-cZw" secondAttribute="top" constant="15" id="D7w-LN-IYj"/>
                                     <constraint firstAttribute="bottom" secondItem="SaS-H1-fus" secondAttribute="bottom" constant="15" id="IHa-qr-j3n"/>
                                     <constraint firstAttribute="trailing" secondItem="SaS-H1-fus" secondAttribute="trailing" id="NlF-d0-is8"/>
                                     <constraint firstItem="SaS-H1-fus" firstAttribute="leading" secondItem="eB0-HO-cZw" secondAttribute="leading" id="cMA-jL-2Wj"/>
+                                    <constraint firstAttribute="height" constant="95" id="eLI-ar-997"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-cw-RZZ">
-                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="806" id="yF9-fJ-ODb"/>
-                                </constraints>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2F0-cw-RZZ" firstAttribute="top" secondItem="eB0-HO-cZw" secondAttribute="bottom" id="2yL-RA-5IO"/>
                             <constraint firstItem="ZYp-dJ-lHN" firstAttribute="top" secondItem="2F0-cw-RZZ" secondAttribute="bottom" constant="-34" id="3aO-cv-Fyk"/>
                             <constraint firstItem="la3-aj-sNU" firstAttribute="top" secondItem="Ecw-fQ-cKZ" secondAttribute="bottom" constant="-44" id="4M1-O6-vbK"/>
                             <constraint firstItem="eB0-HO-cZw" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="7Jz-so-RhX"/>
                             <constraint firstItem="2F0-cw-RZZ" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="Kof-x2-LpX"/>
                             <constraint firstAttribute="trailing" secondItem="la3-aj-sNU" secondAttribute="trailing" id="Lnv-AO-itq"/>
+                            <constraint firstItem="eB0-HO-cZw" firstAttribute="top" secondItem="Ecw-fQ-cKZ" secondAttribute="bottom" constant="-44" id="Nrp-z0-lpe"/>
                             <constraint firstAttribute="trailing" secondItem="2F0-cw-RZZ" secondAttribute="trailing" id="Otf-46-hBo"/>
                             <constraint firstAttribute="trailing" secondItem="eB0-HO-cZw" secondAttribute="trailing" id="Zq8-KY-2o6"/>
                             <constraint firstItem="ZYp-dJ-lHN" firstAttribute="top" secondItem="la3-aj-sNU" secondAttribute="bottom" constant="-34" id="eOD-LM-Ifu"/>
                             <constraint firstItem="la3-aj-sNU" firstAttribute="leading" secondItem="zI1-RL-bQx" secondAttribute="leading" id="pNx-f5-Oq8"/>
-                            <constraint firstItem="eB0-HO-cZw" firstAttribute="top" secondItem="Ecw-fQ-cKZ" secondAttribute="bottom" constant="-44" id="sJK-Pe-L8r"/>
+                            <constraint firstItem="2F0-cw-RZZ" firstAttribute="top" secondItem="eB0-HO-cZw" secondAttribute="bottom" id="rLt-sA-eAo"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="chU-jB-FtM"/>
                     <connections>
                         <outlet property="headerLabel" destination="SaS-H1-fus" id="ej6-xd-Qrp"/>

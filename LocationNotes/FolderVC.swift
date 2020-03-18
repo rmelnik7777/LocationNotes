@@ -34,6 +34,7 @@ class FolderVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
 
@@ -69,7 +70,8 @@ class FolderVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let noteInCell = notesActual[indexPath.row]
         selectedNote = noteInCell
-        performSegue(withIdentifier: "goToNote", sender: self)
+        goToNote()
+//        performSegue(withIdentifier: "goToNote", sender: self)
     }
     
     var buyingForm = BuyingForm()
@@ -82,14 +84,15 @@ class FolderVC: UITableViewController {
         }
         selectedNote = Note.newNote(name: "nn", inFolder: folder)
         selectedNote?.addCurrentLocation()
-        performSegue(withIdentifier: "goToNote", sender: self)
+        goToNote()
+//        performSegue(withIdentifier: "goToNote", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToNote"{
-            (segue.destination as! NoteVC).note = selectedNote
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToNote"{
+//            (segue.destination as? NoteVC)?.note = selectedNote
+//        }
+//    }
     
     /*
     // Override to support conditional editing of the table view.
@@ -127,14 +130,13 @@ class FolderVC: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func goToNote() {
+        guard let vc = Router.shared.noteVC() else { return }
+        vc.note = self.selectedNote
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
 
 }

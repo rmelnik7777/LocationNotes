@@ -36,6 +36,7 @@
 		5570C88B23FA99D7002B89CC /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C88323FA99D7002B89CC /* Folder+CoreDataProperties.swift */; };
 		5570C88C23FA99D7002B89CC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C88423FA99D7002B89CC /* Note+CoreDataClass.swift */; };
 		5570C88D23FA99D7002B89CC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570C88523FA99D7002B89CC /* Note+CoreDataProperties.swift */; };
+		55785C3C2422730C00D02EE6 /* NoteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55785C3B2422730C00D02EE6 /* NoteAnnotation.swift */; };
 		5586F8052418E40100CC9DC3 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5586F8042418E40100CC9DC3 /* StoreManager.swift */; };
 		5586F8092419062B00CC9DC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5586F80B2419062B00CC9DC3 /* Localizable.strings */; };
 		55A422F224117B0B00498B46 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A422F124117B0B00498B46 /* MapVC.swift */; };
@@ -48,7 +49,7 @@
 		55FBC07024224CFA00B695E2 /* Super Webcomic Bros. Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55FBC06C24224CFA00B695E2 /* Super Webcomic Bros. Bold Italic.ttf */; };
 		55FBC07124224CFA00B695E2 /* Super Webcomic Bros..ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55FBC06D24224CFA00B695E2 /* Super Webcomic Bros..ttf */; };
 		55FBC0732422598C00B695E2 /* UIViewController+AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBC0722422598C00B695E2 /* UIViewController+AlertView.swift */; };
-		55FBC0752422631B00B695E2 /* MapVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBC0742422631B00B695E2 /* MapVC.storyboard */; };
+		55FBC0752422631B00B695E2 /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBC0742422631B00B695E2 /* Note.storyboard */; };
 		CC6D1ED65F7BD464DB78D13C /* Pods_LocationNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8F9A96CDEE81D6474FDAB8 /* Pods_LocationNotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		5570C88323FA99D7002B89CC /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5570C88423FA99D7002B89CC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5570C88523FA99D7002B89CC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55785C3B2422730C00D02EE6 /* NoteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAnnotation.swift; sourceTree = "<group>"; };
 		5586F8042418E40100CC9DC3 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		5586F80A2419062B00CC9DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5586F80C2419064400CC9DC3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 		55FBC06C24224CFA00B695E2 /* Super Webcomic Bros. Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Webcomic Bros. Bold Italic.ttf"; sourceTree = "<group>"; };
 		55FBC06D24224CFA00B695E2 /* Super Webcomic Bros..ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Webcomic Bros..ttf"; sourceTree = "<group>"; };
 		55FBC0722422598C00B695E2 /* UIViewController+AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertView.swift"; sourceTree = "<group>"; };
-		55FBC0742422631B00B695E2 /* MapVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapVC.storyboard; sourceTree = "<group>"; };
+		55FBC0742422631B00B695E2 /* Note.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Note.storyboard; sourceTree = "<group>"; };
 		D914BCC351530611CCF75F0E /* Pods-LocationNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationNotes.debug.xcconfig"; path = "Target Support Files/Pods-LocationNotes/Pods-LocationNotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +157,7 @@
 		550910F4241A2A81008C0F54 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				55FBC0762422632800B695E2 /* MapVC */,
+				55FBC0762422632800B695E2 /* NoteVC */,
 				5576D7D824222C7D0017B05E /* Menu */,
 				550910F5241A2A90008C0F54 /* Banner */,
 			);
@@ -218,10 +220,8 @@
 				5586F80D24195FC800CC9DC3 /* Subscriptions */,
 				550910F4241A2A81008C0F54 /* VC */,
 				5560E58C24014E3F00061EC0 /* FoldersVC.swift */,
+				55A422F124117B0B00498B46 /* MapVC.swift */,
 				55CD911D2402C10600A778F3 /* FolderVC.swift */,
-				55CD911F2402F47E00A778F3 /* NoteVC.swift */,
-				555E15C22407FB260010BDF3 /* SelectFolderVC.swift */,
-				555D0DEB241031F50045E55E /* NoteMapVC.swift */,
 				5570C86D23FA832C002B89CC /* Main.storyboard */,
 				55FBC06824224C7000B695E2 /* Resourse */,
 				55FBC067242248A000B695E2 /* Helper */,
@@ -272,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				551BFB6D2408499D0033CBF9 /* LocationManager.swift */,
+				55785C3B2422730C00D02EE6 /* NoteAnnotation.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -295,13 +296,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		55FBC0762422632800B695E2 /* MapVC */ = {
+		55FBC0762422632800B695E2 /* NoteVC */ = {
 			isa = PBXGroup;
 			children = (
-				55A422F124117B0B00498B46 /* MapVC.swift */,
-				55FBC0742422631B00B695E2 /* MapVC.storyboard */,
+				55FBC0742422631B00B695E2 /* Note.storyboard */,
+				55CD911F2402F47E00A778F3 /* NoteVC.swift */,
+				555E15C22407FB260010BDF3 /* SelectFolderVC.swift */,
+				555D0DEB241031F50045E55E /* NoteMapVC.swift */,
 			);
-			path = MapVC;
+			path = NoteVC;
 			sourceTree = "<group>";
 		};
 		946D7D5B181F8D91CEEF99B5 /* Frameworks */ = {
@@ -324,6 +327,7 @@
 				5570C86023FA832C002B89CC /* Sources */,
 				5570C86123FA832C002B89CC /* Frameworks */,
 				5570C86223FA832C002B89CC /* Resources */,
+				55785C3A2422679D00D02EE6 /* Run SwiftLint */,
 				7A2DBEB8AAF0B00E59A5F82A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -384,7 +388,7 @@
 				5570C87423FA832F002B89CC /* Assets.xcassets in Resources */,
 				5570C86F23FA832C002B89CC /* Main.storyboard in Resources */,
 				55FBC06E24224CFA00B695E2 /* Super Webcomic Bros. Bold.ttf in Resources */,
-				55FBC0752422631B00B695E2 /* MapVC.storyboard in Resources */,
+				55FBC0752422631B00B695E2 /* Note.storyboard in Resources */,
 				55062FB4241AC483000FC86E /* Menu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +396,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		55785C3A2422679D00D02EE6 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		55D607BF242147D200F2C9D0 /* Run R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,6 +497,7 @@
 				55EE5A3D23FE7C1A001F8642 /* CoreDataManager.swift in Sources */,
 				55A422F224117B0B00498B46 /* MapVC.swift in Sources */,
 				55062FB8241AC679000FC86E /* MenuCell.swift in Sources */,
+				55785C3C2422730C00D02EE6 /* NoteAnnotation.swift in Sources */,
 				55D607C1242149ED00F2C9D0 /* R.generated.swift in Sources */,
 				55062FC3241ACA43000FC86E /* ShadowRounded.swift in Sources */,
 				55062FB3241AC483000FC86E /* MenuVC.swift in Sources */,

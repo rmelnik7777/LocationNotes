@@ -132,8 +132,8 @@ class FoldersVC: UITableViewController {
     
     
     
-    @IBAction func subscribeButtonTapped(_ sender: Any) {
-//        navigationController?.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        Router.shared.showInitialVC()
     }
     
 }

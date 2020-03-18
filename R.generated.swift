@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -229,8 +230,89 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.file` struct is generated, and contains static references to 4 files.
+  struct file {
+    /// Resource file `GrinchedRegular.otf`.
+    static let grinchedRegularOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "GrinchedRegular", pathExtension: "otf")
+    /// Resource file `Super Webcomic Bros. Bold Italic.ttf`.
+    static let superWebcomicBrosBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Super Webcomic Bros. Bold Italic", pathExtension: "ttf")
+    /// Resource file `Super Webcomic Bros. Bold.ttf`.
+    static let superWebcomicBrosBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Super Webcomic Bros. Bold", pathExtension: "ttf")
+    /// Resource file `Super Webcomic Bros..ttf`.
+    static let superWebcomicBrosTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Super Webcomic Bros.", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "GrinchedRegular", withExtension: "otf")`
+    static func grinchedRegularOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.grinchedRegularOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Super Webcomic Bros. Bold Italic", withExtension: "ttf")`
+    static func superWebcomicBrosBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.superWebcomicBrosBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Super Webcomic Bros. Bold", withExtension: "ttf")`
+    static func superWebcomicBrosBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.superWebcomicBrosBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Super Webcomic Bros.", withExtension: "ttf")`
+    static func superWebcomicBrosTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.superWebcomicBrosTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 4 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Grinched`.
+    static let grinched = Rswift.FontResource(fontName: "Grinched")
+    /// Font `SuperWebcomicBros.-BoldItalic`.
+    static let superWebcomicBrosBoldItalic = Rswift.FontResource(fontName: "SuperWebcomicBros.-BoldItalic")
+    /// Font `SuperWebcomicBros.-Bold`.
+    static let superWebcomicBrosBold = Rswift.FontResource(fontName: "SuperWebcomicBros.-Bold")
+    /// Font `SuperWebcomicBros.`.
+    static let superWebcomicBros = Rswift.FontResource(fontName: "SuperWebcomicBros.")
+
+    /// `UIFont(name: "Grinched", size: ...)`
+    static func grinched(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: grinched, size: size)
+    }
+
+    /// `UIFont(name: "SuperWebcomicBros.", size: ...)`
+    static func superWebcomicBros(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: superWebcomicBros, size: size)
+    }
+
+    /// `UIFont(name: "SuperWebcomicBros.-Bold", size: ...)`
+    static func superWebcomicBrosBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: superWebcomicBrosBold, size: size)
+    }
+
+    /// `UIFont(name: "SuperWebcomicBros.-BoldItalic", size: ...)`
+    static func superWebcomicBrosBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: superWebcomicBrosBoldItalic, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.grinched(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Grinched' could not be loaded, is 'GrinchedRegular.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.superWebcomicBros(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SuperWebcomicBros.' could not be loaded, is 'Super Webcomic Bros..ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.superWebcomicBrosBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SuperWebcomicBros.-Bold' could not be loaded, is 'Super Webcomic Bros. Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.superWebcomicBrosBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SuperWebcomicBros.-BoldItalic' could not be loaded, is 'Super Webcomic Bros. Bold Italic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
+    /// Image `BackgroundMenu`.
+    static let backgroundMenu = Rswift.ImageResource(bundle: R.hostingBundle, name: "BackgroundMenu")
     /// Image `Background`.
     static let background = Rswift.ImageResource(bundle: R.hostingBundle, name: "Background")
     /// Image `noteImage`.
@@ -240,6 +322,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Background", bundle: ..., traitCollection: ...)`
     static func background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.background, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "BackgroundMenu", bundle: ..., traitCollection: ...)`
+    static func backgroundMenu(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.backgroundMenu, compatibleWith: traitCollection)
     }
     #endif
 
@@ -289,26 +378,121 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
-      /// en translation: all note
+      /// en translation: A menu item is under construction
       ///
       /// Locales: en, ru
-      static let allNote = Rswift.StringResource(key: "all note", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      static let menuAlertTitle = Rswift.StringResource(key: "menu.alert.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      /// en translation: Currency converter
+      ///
+      /// Locales: en, ru
+      static let menuCurrencyConverter = Rswift.StringResource(key: "menu.CurrencyConverter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      /// en translation: In developing
+      ///
+      /// Locales: en, ru
+      static let menuInDeveloping = Rswift.StringResource(key: "menu.InDeveloping", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      /// en translation: Location notes
+      ///
+      /// Locales: en, ru
+      static let menuLocationNotes = Rswift.StringResource(key: "menu.LocationNotes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      /// en translation: Select another item
+      ///
+      /// Locales: en, ru
+      static let menuAlertDescription = Rswift.StringResource(key: "menu.alert.description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
+      /// en translation: Select menu item
+      ///
+      /// Locales: en, ru
+      static let menuSelectMenuItem = Rswift.StringResource(key: "menu.SelectMenuItem", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ru"], comment: nil)
 
-      /// en translation: all note
+      /// en translation: A menu item is under construction
       ///
       /// Locales: en, ru
-      static func allNote(preferredLanguages: [String]? = nil) -> String {
+      static func menuAlertTitle(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("all note", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("menu.alert.title", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "all note"
+          return "menu.alert.title"
         }
 
-        return NSLocalizedString("all note", bundle: bundle, comment: "")
+        return NSLocalizedString("menu.alert.title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Currency converter
+      ///
+      /// Locales: en, ru
+      static func menuCurrencyConverter(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("menu.CurrencyConverter", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "menu.CurrencyConverter"
+        }
+
+        return NSLocalizedString("menu.CurrencyConverter", bundle: bundle, comment: "")
+      }
+
+      /// en translation: In developing
+      ///
+      /// Locales: en, ru
+      static func menuInDeveloping(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("menu.InDeveloping", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "menu.InDeveloping"
+        }
+
+        return NSLocalizedString("menu.InDeveloping", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Location notes
+      ///
+      /// Locales: en, ru
+      static func menuLocationNotes(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("menu.LocationNotes", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "menu.LocationNotes"
+        }
+
+        return NSLocalizedString("menu.LocationNotes", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Select another item
+      ///
+      /// Locales: en, ru
+      static func menuAlertDescription(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("menu.alert.description", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "menu.alert.description"
+        }
+
+        return NSLocalizedString("menu.alert.description", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Select menu item
+      ///
+      /// Locales: en, ru
+      static func menuSelectMenuItem(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("menu.SelectMenuItem", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "menu.SelectMenuItem"
+        }
+
+        return NSLocalizedString("menu.SelectMenuItem", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
@@ -461,7 +645,9 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "BackgroundMenu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'BackgroundMenu' is used in storyboard 'Menu', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "appOrange", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'appOrange' is used in storyboard 'Menu', but couldn't be loaded.") }
         }
         if _R.storyboard.menu().menuNavVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuNavVC' could not be loaded from storyboard 'Menu' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.menu().menuVC() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuVC' could not be loaded from storyboard 'Menu' as 'MenuVC'.") }

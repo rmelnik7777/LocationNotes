@@ -6,4 +6,11 @@
   Copyright © 2020 Roman Melnyk. All rights reserved.
 */
 
-"all note" = "Все заметки";
+//Menu
+"menu.SelectMenuItem" = "Выберите пункт меню";
+"menu.CurrencyConverter" = "Конвертер валют";
+"menu.LocationNotes" = "Локальные заметки";
+"menu.InDeveloping" = "В разработке";
+"menu.alert.title" = "Пункт меню находится в разработке";
+"menu.alert.description" = "Выберите другой пункт";
+

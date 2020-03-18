@@ -15,36 +15,35 @@ class MenuVC: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let menu = ["fdjfhdjgh", "dafefsefe","dawadaf121"]
+    // MARK: - Properties
+    
+    let menu = [R.string.localizable.menuLocationNotes(), R.string.localizable.menuCurrencyConverter(),R.string.localizable.menuInDeveloping()]
     
     // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-          tableView.dataSource = self
-        tableView.estimatedRowHeight = 100
-        tableView.register(MenuCell.self)
-        // Do any additional setup after loading the view.
-    }
+        prepareTableView()
+        prepareUI()
 
+    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - UI
+    func prepareUI() {
+        headerLabel.textColor = .white
+        headerLabel.text = R.string.localizable.menuSelectMenuItem()
     }
-    */
-
 }
+
+// MARK: - TableView
 
 extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     
-    
+    func prepareTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+//        tableView.estimatedRowHeight = 100
+        tableView.register(MenuCell.self)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
@@ -66,10 +65,9 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
             guard let vc = Router.shared.bannerVC() else { return }
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
-//            self.navigationController?.pushViewController(Router.shared.bannerVC(), animated: true)
-//            print("Govno")
+        } else {
+            showAlertView(R.string.localizable.menuAlertTitle(), R.string.localizable.menuAlertDescription())
         }
-        print("indexPath - \(indexPath)")
     }
     
     

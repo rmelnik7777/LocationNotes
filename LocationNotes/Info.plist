@@ -49,5 +49,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GrinchedRegular.otf</string>
+		<string>Super Webcomic Bros. Bold Italic.ttf</string>
+		<string>Super Webcomic Bros. Bold.ttf</string>
+		<string>Super Webcomic Bros..ttf</string>
+	</array>
 </dict>
 </plist>

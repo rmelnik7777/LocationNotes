@@ -151,9 +151,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Folders" id="Kf4-QJ-95U">
-                        <barButtonItem key="leftBarButtonItem" title="Subscribe" style="plain" id="eu1-Oj-jjL">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="eu1-Oj-jjL">
                             <connections>
-                                <action selector="subscribeButtonTapped:" destination="8s6-wN-snW" id="eQM-a9-goM"/>
+                                <action selector="cancelButtonTapped:" destination="8s6-wN-snW" id="LNQ-Wk-jFF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cej-VW-63R">

@@ -6,4 +6,10 @@
   Copyright © 2020 Roman Melnyk. All rights reserved.
 */
 
-"all note" = "all note";
+//Menu
+"menu.SelectMenuItem" = "Select menu item";
+"menu.CurrencyConverter" = "Currency converter";
+"menu.LocationNotes" = "Location notes";
+"menu.InDeveloping" = "In developing";
+"menu.alert.title" = "A menu item is under construction";
+"menu.alert.description" = "Select another item";

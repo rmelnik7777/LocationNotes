@@ -301,7 +301,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `BackgroundMenu`.
     static let backgroundMenu = Rswift.ImageResource(bundle: R.hostingBundle, name: "BackgroundMenu")
@@ -309,6 +309,8 @@ struct R: Rswift.Validatable {
     static let background = Rswift.ImageResource(bundle: R.hostingBundle, name: "Background")
     /// Image `noteImage`.
     static let noteImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "noteImage")
+    /// Image `paper`.
+    static let paper = Rswift.ImageResource(bundle: R.hostingBundle, name: "paper")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Background", bundle: ..., traitCollection: ...)`
@@ -331,13 +333,22 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "paper", bundle: ..., traitCollection: ...)`
+    static func paper(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.paper, compatibleWith: traitCollection)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `MenuCell`.
     static let menuCell = _R.nib._MenuCell()
+    /// Nib `Slide`.
+    static let slide = _R.nib._Slide()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "MenuCell", in: bundle)`
@@ -347,8 +358,20 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "Slide", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.slide) instead")
+    static func slide(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.slide)
+    }
+    #endif
+
     static func menuCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MenuCell? {
       return R.nib.menuCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuCell
+    }
+
+    static func slide(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> Slide? {
+      return R.nib.slide.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? Slide
     }
 
     fileprivate init() {}
@@ -529,6 +552,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _Slide: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "Slide"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> Slide? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? Slide
+      }
+
+      fileprivate init() {}
+    }
+
     fileprivate init() {}
   }
   #endif
@@ -564,7 +598,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "Background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Background' is used in storyboard 'Banner', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "BackgroundMenu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'BackgroundMenu' is used in storyboard 'Banner', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "appBlue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'appBlue' is used in storyboard 'Banner', but couldn't be loaded.") }
           if UIKit.UIColor(named: "appOrange", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'appOrange' is used in storyboard 'Banner', but couldn't be loaded.") }
@@ -584,6 +618,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "BackgroundMenu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'BackgroundMenu' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if UIKit.UIImage(named: "noteImage", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'noteImage' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "appBlue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'appBlue' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }

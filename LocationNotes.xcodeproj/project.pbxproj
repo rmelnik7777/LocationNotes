@@ -42,6 +42,8 @@
 		55A422F224117B0B00498B46 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A422F124117B0B00498B46 /* MapVC.swift */; };
 		55CD911E2402C10600A778F3 /* FolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD911D2402C10600A778F3 /* FolderVC.swift */; };
 		55CD91202402F47E00A778F3 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD911F2402F47E00A778F3 /* NoteVC.swift */; };
+		55D5FCEA24239108001845C1 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D5FCE924239108001845C1 /* Slide.xib */; };
+		55D5FCEC242392A5001845C1 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D5FCEB242392A5001845C1 /* Slide.swift */; };
 		55D607C1242149ED00F2C9D0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D607C0242149ED00F2C9D0 /* R.generated.swift */; };
 		55EE5A3D23FE7C1A001F8642 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EE5A3C23FE7C19001F8642 /* CoreDataManager.swift */; };
 		55FBC06E24224CFA00B695E2 /* Super Webcomic Bros. Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55FBC06A24224CFA00B695E2 /* Super Webcomic Bros. Bold.ttf */; };
@@ -94,6 +96,8 @@
 		55A422F124117B0B00498B46 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		55CD911D2402C10600A778F3 /* FolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderVC.swift; sourceTree = "<group>"; };
 		55CD911F2402F47E00A778F3 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
+		55D5FCE924239108001845C1 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		55D5FCEB242392A5001845C1 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		55D607C0242149ED00F2C9D0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		55EE5A3C23FE7C19001F8642 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		55FBC06A24224CFA00B695E2 /* Super Webcomic Bros. Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Webcomic Bros. Bold.ttf"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		550910F5241A2A90008C0F54 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
+				55D5FCE8242390EB001845C1 /* View */,
 				550910F0241A2642008C0F54 /* Banner.storyboard */,
 				550910F2241A2A7C008C0F54 /* BannerVC.swift */,
 			);
@@ -266,6 +271,15 @@
 				550E7732241825E1003B7AF2 /* PriceManager.swift */,
 			);
 			path = Subscriptions;
+			sourceTree = "<group>";
+		};
+		55D5FCE8242390EB001845C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55D5FCE924239108001845C1 /* Slide.xib */,
+				55D5FCEB242392A5001845C1 /* Slide.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		55FBC067242248A000B695E2 /* Helper */ = {
@@ -384,6 +398,7 @@
 				5570C87723FA832F002B89CC /* LaunchScreen.storyboard in Resources */,
 				55FBC06F24224CFA00B695E2 /* GrinchedRegular.otf in Resources */,
 				55FBC07124224CFA00B695E2 /* Super Webcomic Bros..ttf in Resources */,
+				55D5FCEA24239108001845C1 /* Slide.xib in Resources */,
 				55FBC07024224CFA00B695E2 /* Super Webcomic Bros. Bold Italic.ttf in Resources */,
 				5570C87423FA832F002B89CC /* Assets.xcassets in Resources */,
 				5570C86F23FA832C002B89CC /* Main.storyboard in Resources */,
@@ -412,7 +427,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "
+";
 		};
 		55D607BF242147D200F2C9D0 /* Run R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -503,6 +519,7 @@
 				55062FB3241AC483000FC86E /* MenuVC.swift in Sources */,
 				5570C88A23FA99D7002B89CC /* Folder+CoreDataClass.swift in Sources */,
 				5570C88C23FA99D7002B89CC /* Note+CoreDataClass.swift in Sources */,
+				55D5FCEC242392A5001845C1 /* Slide.swift in Sources */,
 				5530B6AD24212D7200D47EBD /* Router.swift in Sources */,
 				5586F8052418E40100CC9DC3 /* StoreManager.swift in Sources */,
 				550E7733241825E1003B7AF2 /* PriceManager.swift in Sources */,

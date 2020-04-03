@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Slide" customModule="LocationNotes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="344"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlJ-SE-ato">
+                    <rect key="frame" x="0.0" y="44" width="437" height="266"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un1-Sz-lEM">
+                            <rect key="frame" x="20" y="20" width="397" height="63"/>
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can Subscribe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAK-3m-oAx">
+                            <rect key="frame" x="20" y="98" width="397" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="nnM-Hy-HY2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="22"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWA-p9-XQ2">
+                            <rect key="frame" x="20" y="136" width="397" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="o2s-7w-Rfx"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BAK-3m-oAx" firstAttribute="top" secondItem="Un1-Sz-lEM" secondAttribute="bottom" constant="15" id="CEx-DH-w6D"/>
+                        <constraint firstItem="FWA-p9-XQ2" firstAttribute="leading" secondItem="JlJ-SE-ato" secondAttribute="leading" constant="20" id="IHs-u8-I7t"/>
+                        <constraint firstItem="FWA-p9-XQ2" firstAttribute="top" secondItem="BAK-3m-oAx" secondAttribute="bottom" constant="10" id="LRm-39-iwP"/>
+                        <constraint firstAttribute="trailing" secondItem="BAK-3m-oAx" secondAttribute="trailing" constant="20" id="P2w-uA-mkO"/>
+                        <constraint firstAttribute="bottom" secondItem="FWA-p9-XQ2" secondAttribute="bottom" constant="10" id="PRw-7D-3AH"/>
+                        <constraint firstItem="Un1-Sz-lEM" firstAttribute="leading" secondItem="JlJ-SE-ato" secondAttribute="leading" constant="20" id="VlA-bu-nGh"/>
+                        <constraint firstItem="BAK-3m-oAx" firstAttribute="leading" secondItem="JlJ-SE-ato" secondAttribute="leading" constant="20" id="dzO-Mt-D9z"/>
+                        <constraint firstAttribute="trailing" secondItem="FWA-p9-XQ2" secondAttribute="trailing" constant="20" id="iP9-OQ-EWW"/>
+                        <constraint firstItem="Un1-Sz-lEM" firstAttribute="top" secondItem="JlJ-SE-ato" secondAttribute="top" constant="20" id="n8j-lu-QuS"/>
+                        <constraint firstAttribute="trailing" secondItem="Un1-Sz-lEM" secondAttribute="trailing" constant="20" id="w5x-yO-fnh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JlJ-SE-ato" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DxD-AD-ca7"/>
+                <constraint firstItem="JlJ-SE-ato" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GU0-eq-0b4"/>
+                <constraint firstItem="JlJ-SE-ato" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uHQ-V7-dli"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JlJ-SE-ato" secondAttribute="trailing" id="wGe-gQ-xWu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="BAK-3m-oAx" id="VmY-mb-SKP"/>
+                <outlet property="image" destination="FWA-p9-XQ2" id="jKD-bm-59w"/>
+                <outlet property="titleLabel" destination="Un1-Sz-lEM" id="Tnc-8A-HjK"/>
+            </connections>
+            <point key="canvasLocation" x="-406.52173913043481" y="48.883928571428569"/>
+        </view>
+    </objects>
+</document>

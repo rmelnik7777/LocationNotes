@@ -14,7 +14,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var priceManager = PriceManager()
-
+//"${PODS_ROOT}/SwiftLint/swiftlint"
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
  
         Router.shared.showInitialVC()

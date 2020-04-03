@@ -7,8 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 @objc(ImageNote)
 public class ImageNote: NSManagedObject {

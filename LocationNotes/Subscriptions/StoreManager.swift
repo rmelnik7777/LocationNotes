@@ -77,11 +77,9 @@ extension StoreManager: SKPaymentTransactionObserver {
         }
     }
     
-    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error){
+    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
         
     }
-    
-    
 }
 
 extension StoreManager: SKProductsRequestDelegate {
@@ -102,7 +100,6 @@ extension StoreManager: SKProductsRequestDelegate {
     }
 }
 
-
 class BuyingForm {
     
     var isNeedToShow: Bool {
@@ -119,13 +116,13 @@ class BuyingForm {
     func showForm(inController: UIViewController) {
         if let versionProduct = versionProduct {
             let alertController = UIAlertController(title: versionProduct.localizedTitle, message: versionProduct.localizedDescription, preferredStyle: UIAlertController.Style.alert)
-            let actionBuy = UIAlertAction(title: "Buy for \(versionProduct.price) \(versionProduct.priceLocale.currencySymbol!)", style: UIAlertAction.Style.default) { (alert) in
+            let actionBuy = UIAlertAction(title: "Buy for \(versionProduct.price) \(versionProduct.priceLocale.currencySymbol!)", style: UIAlertAction.Style.default) { _ in
                 self.storeManager.buyFullVersion()
             }
-            let actionRestore = UIAlertAction(title: "Restore", style: UIAlertAction.Style.default) { (alert) in
+            let actionRestore = UIAlertAction(title: "Restore", style: UIAlertAction.Style.default) { _ in
                 self.storeManager.restoreFullVersion()
             }
-            let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (alert) in
+            let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { _ in
                 
             }
             

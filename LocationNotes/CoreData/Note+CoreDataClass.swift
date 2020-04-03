@@ -7,26 +7,26 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 import UIKit
 
 @objc(Note)
 public class Note: NSManagedObject {
-    class func newNote(name: String, inFolder: Folder?) -> Note  {
+    
+    class func newNote(name: String, inFolder: Folder?) -> Note {
         let note = Note(context: CoreDataManager.sharedInstance.managedObjecContext)
         
         note.name = name
         note.dateUpdate = Date()
-        
-//        if let inFolder = inFolder{
-            note.folder = inFolder
-//        }
+        note.folder = inFolder
+
         return note
     }
     
     var imageActual: UIImage? {
-        set{
+        
+        set {
             if newValue == nil {
                 if self.image != nil {
                     CoreDataManager.sharedInstance.managedObjecContext.delete(self.image!)
@@ -41,6 +41,7 @@ public class Note: NSManagedObject {
             }
             dateUpdate = Date()
         }
+        
         get {
             if self.image != nil {
                 
@@ -54,7 +55,7 @@ public class Note: NSManagedObject {
     
     var locationActual: LocationCoordinate? {
         get {
-            if self.location == nil{
+            if self.location == nil {
                 return nil
             } else {
                 return LocationCoordinate(lat: self.location!.lat, lon: self.location!.lon)
@@ -81,13 +82,13 @@ public class Note: NSManagedObject {
     }
     
     func addCurrentLocation() {
-        LocationManager.shareInstance.getCurrentLocation { (location) in
+        LocationManager.shareInstance.getCurrentLocation { location in
             self.locationActual = location
-            print("🐹🐹🐹🐹🐹Новая локация \(location)")
+            print("New Location \(location)")
         }
     }
     
-    func addImage(image: UIImage){
+    func addImage(image: UIImage) {
         let imageNote = ImageNote(context: CoreDataManager.sharedInstance.managedObjecContext)
         imageNote.imageBig = image.jpegData(compressionQuality: 1)
         self.image = imageNote
@@ -101,10 +102,10 @@ public class Note: NSManagedObject {
     }
     
     var dateUpdateString: String {
-        let df = DateFormatter()
-        df.dateStyle = .medium
-        df.timeStyle = .short
-        return df.string(from: self.dateUpdate)
+        let dateFormat = DateFormatter()
+        dateFormat.dateStyle = .medium
+        dateFormat.timeStyle = .short
+        return dateFormat.string(from: self.dateUpdate)
     }
 
 }

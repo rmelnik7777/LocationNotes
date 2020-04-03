@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GrinchedRegular.otf">
+            <string>Grinched</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -16,12 +21,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundMenu" translatesAutoresizingMaskIntoConstraints="NO" id="lZo-GH-See">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noteImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-r7-JCJ">
                                 <rect key="frame" x="40" y="53" width="334" height="800"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-Uz-aqe">
-                                <rect key="frame" x="40" y="119" width="334" height="84.5"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-Uz-aqe">
+                                <rect key="frame" x="40" y="119" width="334" height="49"/>
+                                <fontDescription key="fontDescription" name="Grinched" family="Grinched" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by RO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOV-f6-TYr">
+                                <rect key="frame" x="316" y="81" width="68" height="28"/>
+                                <fontDescription key="fontDescription" name="Grinched" family="Grinched" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,8 +46,15 @@
                             <constraint firstItem="Pj5-Uz-aqe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="6as-sQ-J98"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pj5-Uz-aqe" secondAttribute="trailing" constant="40" id="FF1-Ce-Gtk"/>
                             <constraint firstItem="2Id-r7-JCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GZV-Cz-cWB"/>
+                            <constraint firstItem="lZo-GH-See" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="My8-l7-JVr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lZo-GH-See" secondAttribute="trailing" id="PZ3-Ah-cyF"/>
                             <constraint firstItem="2Id-r7-JCJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Q2w-dG-H2f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Id-r7-JCJ" secondAttribute="trailing" constant="40" id="UME-CD-S3P"/>
+                            <constraint firstItem="Pj5-Uz-aqe" firstAttribute="top" secondItem="EOV-f6-TYr" secondAttribute="bottom" constant="10" id="beb-Ft-eIs"/>
+                            <constraint firstItem="EOV-f6-TYr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="f81-Bc-Ncf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOV-f6-TYr" secondAttribute="trailing" constant="30" id="g10-08-fpX"/>
+                            <constraint firstItem="lZo-GH-See" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="yeF-yN-zgh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lZo-GH-See" secondAttribute="bottom" constant="-34" id="zEV-4P-Rh1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,6 +65,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackgroundMenu" width="960" height="639.5"/>
         <image name="noteImage" width="400" height="400"/>
         <namedColor name="appBlue">
             <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

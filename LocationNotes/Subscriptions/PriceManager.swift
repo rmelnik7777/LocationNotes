@@ -13,7 +13,6 @@ var versionProduct: SKProduct?
 let idFullVersion = "LocationNotes.FullVersion"
 let idExtendedVersion = "LocationNotes.ExtendedVersion"
 
-
 class PriceManager: NSObject {
     
     func getPriceForProduct(idProduct: String) {
@@ -29,8 +28,9 @@ class PriceManager: NSObject {
 
 extension PriceManager: SKProductsRequestDelegate {
     
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse){
-        if response.invalidProductIdentifiers.isEmpty{
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        
+        if response.invalidProductIdentifiers.isEmpty {
             
         } else {
 //            print("Есть неактуальные продукты \(response.invalidProductIdentifiers)")
